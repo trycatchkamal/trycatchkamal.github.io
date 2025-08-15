@@ -28,6 +28,14 @@ books:
 oss:
   title: Open-Source Contributions
   contributions:
+    - title: Google Gemini CLI
+      link: https://github.com/google-gemini/gemini-cli/pull/6121
+      tagline: Contributed to Google Gemini CLI fixing some bugs and refactor
+
+    - title: Microsoft GitHub Copilot - GHCP
+      link: https://github.com/microsoft/vscode-copilot-chat/pull/207
+      tagline: Contributed to GHCP on some refactor
+
     - title: Azure Notification Hubs Sample
       link: https://github.com/trycatchkamal/azurenotificationhubssample
       tagline: Sample repo demonstrating push notifications integration with Azure.
