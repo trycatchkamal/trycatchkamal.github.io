@@ -36,11 +36,11 @@ oss:
       link: https://github.com/microsoft/vscode-copilot-chat/pull/207
       tagline: Contributed to GHCP on some refactor
 
-    - title: Azure Notification Hubs Sample
+    - title: Azure Notification Hubs 
       link: https://github.com/trycatchkamal/azurenotificationhubssample
-      tagline: Sample repo demonstrating push notifications integration with Azure.
+      tagline: Sample repo demonstrating push notifications integration with Azure and Spring Boot.
 
-    - title: Akka HTTP PR Contributor
+    - title: Akka HTTP
       link: https://github.com/akka/akka-http/pull/2518
       tagline: Contributed to Akka’s Scala-based actor system and HTTP components.
 
