@@ -1,0 +1,32 @@
+---
+import resumeData from '../data/resume.json';
+const { books } = resumeData;
+---
+
+<section id="books" class="section-container">
+  <div class="mb-12 scroll-mt-24">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-2 text-gray-900">📚 Published Books</h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    {books.map(book => (
+      <a
+        href={book.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card group"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-accent transition-colors">
+          {book.title}
+        </h3>
+        <p class="text-gray-600 mb-4">{book.authors}</p>
+        <div class="flex items-center text-accent font-medium">
+          <span>View on Amazon</span>
+          <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

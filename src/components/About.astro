@@ -1,0 +1,36 @@
+---
+import resumeData from '../data/resume.json';
+const { summary, education, certifications } = resumeData;
+---
+
+<section id="about" class="section-container bg-gray-50">
+  <div class="mb-12 scroll-mt-24">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-2 text-gray-900">About Me</h2>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    {summary.split('\n\n').map(para => (
+      <p class="mb-4 text-gray-700 leading-relaxed">{para.trim()}</p>
+    ))}
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="card">
+      <h3 class="text-xl font-semibold mb-4 text-gray-900">🎓 Education</h3>
+      <p class="font-medium text-gray-900">{education.degree}</p>
+      <p class="text-gray-600">{education.institution}</p>
+      <p class="text-sm text-gray-500 mt-1">{education.period}</p>
+    </div>
+
+    <div class="card">
+      <h3 class="text-xl font-semibold mb-4 text-gray-900">🏆 Certifications</h3>
+      {certifications.map(cert => (
+        <div class="mb-4 last:mb-0">
+          <p class="font-medium text-gray-900">{cert.name}</p>
+          <p class="text-sm text-gray-600">{cert.description}</p>
+          <p class="text-sm text-gray-500 mt-1">{cert.year}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,170 @@
+{
+  "profile": {
+    "name": "Kamal Raj Sekar",
+    "tagline": "2x failed AI SaaS Maker | Published Author | Speaker | XP | Devops Coach | Open-source Contributor | Software Architect | Hands-on Techie",
+    "avatar": "/profile.jpg",
+    "email": "notify.kamalraj@gmail.com",
+    "linkedin": "kamalrajsekar",
+    "github": "trycatchkamal",
+    "twitter": "notifykamalraj"
+  },
+  "summary": "I'm an innovative and results-driven XP coach, DevOps advocate and software \narchitect with over 15 years of hands-on experience in building cloud-native, \ndistributed systems. \n\nAuthor of a whitepaper on AI Agents,  Co-creator of 2 AI SaaS \nproducts FaceQuest and Notesally, solving real-world problems with AI. \n\nI’ve had the privilege of working with high-performing teams across Fortune 500 and \nDeloitte Fast 50 companies, helping them boost their technical agility and adopt \nXP and DevOps practices that really stick. I lead with a servant mindset, guiding \nteams to craft scalable, test-driven solutions and drive ongoing improvement \nthrough lean and Agile principles.",
+  "experience": [
+    {
+      "role": "Cofounder & Director",
+      "company": "Ampyard",
+      "period": "March 2019 – Present",
+      "details": "Authored the whitepaper *“Real Productivity, Rare Pushbacks”*, outlining a strategic framework for integrating AI agents into product development to boost team efficiency and reduce resistance.\n\nBuilt the MVPs for two AI SaaS products:\n- **FaceQuest** – AI-powered facial recognition platform supporting both 1:1 face verification and 1:N face search.\n- **Notesally** – AI assistant to enhance sales productivity and improve CRM data quality through intelligent note management.",
+      "highlights": [
+        "FaceQuest – AI-powered facial recognition platform supporting both 1:1 face verification and 1:N face search.",
+        "Notesally – AI assistant to enhance sales productivity and improve CRM data quality through intelligent note management."
+      ]
+    },
+    {
+      "role": "Technology Consultant",
+      "company": "TEKenable Ltd",
+      "period": "April 2018 – May 2025",
+      "details": "★ Architected and developed scalable, cloud-native systems with a focus on \nautomation and quality. \n\n★ Executed Agile transformation engagements, mentoring teams on XP, \nTDD, pair programming, and DevOps culture \n\n★ Designed CI/CD pipelines on Azure, improving release velocity and \nfeedback cycles. \n\n★ Implemented Infrastructure as Code (IaC) using ARM templates for \nautomated, version-controlled deployments. \n\n★ Mentored XP champions & scrum masters in clean code, technical agility, \nand sustainable delivery practices. \n\n★ Conducted workshops on tech agility, test automation, and DevOps \npipelines.",
+      "highlights": [
+        "Architected and developed scalable, cloud-native systems with a focus on",
+        "Executed Agile transformation engagements, mentoring teams on XP,",
+        "Designed CI/CD pipelines on Azure, improving release velocity and",
+        "Implemented Infrastructure as Code (IaC) using ARM templates for",
+        "Mentored XP champions & scrum masters in clean code, technical agility,",
+        "Conducted workshops on tech agility, test automation, and DevOps"
+      ]
+    },
+    {
+      "role": "Technical Team Lead & Scrum Master",
+      "company": "Greenfinch Technology Ltd",
+      "period": "October 2015 – April 2018",
+      "details": "★ Modernized legacy codebases into well-architected distributed systems \nusing TDD and clean code practices.\n\n★ Drove DevOps initiatives to establish automated build, test, and \ndeployment pipelines. \n\n★ Delivered new features iteratively in tight delivery cycles, enhancing \nresponsiveness. \n\n★ Mentored cross-functional teams in Agile, XP, and continuous delivery \nbest practices.",
+      "highlights": [
+        "Modernized legacy codebases into well-architected distributed systems",
+        "Drove DevOps initiatives to establish automated build, test, and",
+        "Delivered new features iteratively in tight delivery cycles, enhancing",
+        "Mentored cross-functional teams in Agile, XP, and continuous delivery"
+      ]
+    },
+    {
+      "role": "Senior Software Engineer",
+      "company": "Philips Healthcare R&D India",
+      "period": "October 2012 – September 2015",
+      "details": "★ Redesigned legacy MRI apps into modular, layered architectures. \n\n★ Developed a reflection framework that optimized UI responsiveness and \nreduced overhead. \n\n★ Championed Agile practices, mentoring juniors in TDD, CI/CD, and \niterative delivery.",
+      "highlights": [
+        "Redesigned legacy MRI apps into modular, layered architectures.",
+        "Developed a reflection framework that optimized UI responsiveness and",
+        "Championed Agile practices, mentoring juniors in TDD, CI/CD, and"
+      ]
+    },
+    {
+      "role": "Engineer",
+      "company": "Honeywell Technology Solutions",
+      "period": "January 2010 – October 2012",
+      "details": "★ Built mobile and backend systems for remote patient monitoring using \nAndroid and Bluetooth devices. \n\n★ Delivered enterprise-grade solutions in Agile teams. \n\n★ Recognized for contributions to improvement initiatives.",
+      "highlights": [
+        "Built mobile and backend systems for remote patient monitoring using",
+        "Delivered enterprise-grade solutions in Agile teams.",
+        "Recognized for contributions to improvement initiatives."
+      ]
+    }
+  ],
+  "skills": [
+    "GenAI & AI Agents",
+    "XP & Agile Coaching",
+    "TDD & BDD",
+    "Hands-on Technical Agility",
+    "Servant Leadership",
+    "Technical Mentorship",
+    "Training & Mentoring",
+    "CI/CD · DevOps · Infrastructure as Code (IaC)"
+  ],
+  "books": [
+    {
+      "title": "TDD for C# and .Net Core",
+      "authors": "Kamal Raj Sekar",
+      "link": "https://www.amazon.in/TDD-Net-Core-Microservices-simplified-ebook/dp/B0CW85JN2T?ref_=ast_author_dp"
+    },
+    {
+      "title": "TDD for Angular",
+      "authors": "Vivek Ganesan, Kamal Raj Sekar",
+      "link": "https://www.amazon.in/TDD-Angular-Application-beginner-friendly-manual-ebook/dp/B0BRXMCKDJ"
+    }
+  ],
+  "openSource": [
+    {
+      "title": "Google Gemini CLI",
+      "link": "https://github.com/google-gemini/gemini-cli/pull/6121",
+      "description": "Contributed to Google Gemini CLI fixing some bugs and refactor"
+    },
+    {
+      "title": "Microsoft GitHub Copilot - GHCP",
+      "link": "https://github.com/microsoft/vscode-copilot-chat/pull/207",
+      "description": "Contributed to GHCP on some refactor"
+    },
+    {
+      "title": "Azure Notification Hubs",
+      "link": "https://github.com/trycatchkamal/azurenotificationhubssample",
+      "description": "Sample repo demonstrating push notifications integration with Azure and Spring Boot."
+    },
+    {
+      "title": "Akka HTTP",
+      "link": "https://github.com/akka/akka-http/pull/2518",
+      "description": "Contributed to Akka’s Scala-based actor system and HTTP components."
+    },
+    {
+      "title": "Kanbanstr",
+      "link": "https://github.com/vivganes/kanbanstr/commits/main/?author=trycatchkamal",
+      "description": "Contributed features to this Nostr-based Kanban board app."
+    },
+    {
+      "title": "Zapddit",
+      "link": "https://github.com/vivganes/zapddit/commits/main/?author=trycatchkamal",
+      "description": "Helped build this Reddit-style client for the decentralized Nostr network."
+    }
+  ],
+  "speaking": [
+    {
+      "title": "AI tank symposium",
+      "link": "https://www.linkedin.com/posts/vikas-uppal-5208687_what-a-brilliant-talk-by-vivek-ganesan-and-activity-7314318703272071168-bDst?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVbtn0BDNJ-psRdetZADoxp3K9oFJfvaSc"
+    },
+    {
+      "title": "GenAI Leadership Talk",
+      "link": "https://www.linkedin.com/posts/pingala-software-india-pvt-ltd_leadershiptalk-genai-techtalk-activity-7309837629053661184-BG8r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVbtn0BDNJ-psRdetZADoxp3K9oFJfvaSc"
+    },
+    {
+      "title": "AI Webinars",
+      "link": "https://www.linkedin.com/posts/pingala-software-india-pvt-ltd_leadershiptalk-genai-techtalk-activity-7309837629053661184-BG8r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVbtn0BDNJ-psRdetZADoxp3K9oFJfvaSc"
+    },
+    {
+      "title": "Technical Agility Conference 2020",
+      "link": "https://www.youtube.com/watch?v=yJJgNMwFTow"
+    },
+    {
+      "title": "Agile Gurugram",
+      "link": "https://www.youtube.com/watch?v=yJJgNMwFTow"
+    }
+  ],
+  "trainings": [
+    {
+      "title": "AI Aware IT Leader (3.5 days)",
+      "link": ""
+    },
+    {
+      "title": "Tech-Savvy IT Leader (3 days)",
+      "link": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "PSM 1",
+      "year": "2025",
+      "description": "Certified Scrum Master (PSM I) from Scrum.org, demonstrating proficiency in Scrum principles and practices."
+    }
+  ],
+  "education": {
+    "degree": "B.Tech, Information Technology",
+    "institution": "SASTRA University",
+    "period": "2005 – 2009"
+  }
+}

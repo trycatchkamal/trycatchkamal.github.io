@@ -1,0 +1,25 @@
+---
+import resumeData from '../data/resume.json';
+const { profile } = resumeData;
+---
+
+<section class="section-container text-center">
+  <img
+    src={profile.avatar}
+    alt={profile.name}
+    class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover shadow-lg"
+  />
+
+  <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">{profile.name}</h1>
+
+  <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+    {profile.tagline}
+  </p>
+
+  <a
+    href={`mailto:${profile.email}`}
+    class="inline-block bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+  >
+    Get in Touch
+  </a>
+</section>

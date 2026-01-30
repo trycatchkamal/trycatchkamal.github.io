@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import Books from '../components/Books.astro';
+import Speaking from '../components/Speaking.astro';
+import OpenSource from '../components/OpenSource.astro';
+import Contact from '../components/Contact.astro';
+import resumeData from '../data/resume.json';
+---
+
+<Layout
+  title={`${resumeData.profile.name} - Resume`}
+  description={resumeData.summary}
+>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Skills />
+    <Books />
+    <Speaking />
+    <OpenSource />
+  </main>
+  <Contact />
+</Layout>

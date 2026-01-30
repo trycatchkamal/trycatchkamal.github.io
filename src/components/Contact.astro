@@ -1,0 +1,35 @@
+---
+import resumeData from '../data/resume.json';
+const { profile } = resumeData;
+
+const socialLinks = [
+  { name: 'Email', url: `mailto:${profile.email}`, icon: 'email' },
+  { name: 'LinkedIn', url: `https://linkedin.com/in/${profile.linkedin}`, icon: 'linkedin' },
+  { name: 'GitHub', url: `https://github.com/${profile.github}`, icon: 'github' },
+  { name: 'Twitter', url: `https://twitter.com/${profile.twitter}`, icon: 'twitter' },
+];
+---
+
+<footer id="contact" class="section-container bg-gray-900 text-white">
+  <div class="text-center">
+    <h2 class="text-3xl font-semibold mb-8">Let's Connect</h2>
+
+    <div class="flex flex-wrap justify-center gap-6 mb-8">
+      {socialLinks.map(link => (
+        <a
+          href={link.url}
+          target={link.icon === 'email' ? '_self' : '_blank'}
+          rel={link.icon !== 'email' ? 'noopener noreferrer' : undefined}
+          class="text-gray-300 hover:text-white transition-colors duration-200"
+          aria-label={link.name}
+        >
+          <span class="text-lg font-medium">{link.name}</span>
+        </a>
+      ))}
+    </div>
+
+    <p class="text-gray-400 text-sm">
+      © {new Date().getFullYear()} {profile.name}. Built with Astro & Tailwind CSS.
+    </p>
+  </div>
+</footer>
