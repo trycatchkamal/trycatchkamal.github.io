@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Experience from '../components/Experience.astro';
-import Skills from '../components/Skills.astro';
 import Books from '../components/Books.astro';
-import OpenSource from '../components/OpenSource.astro';
 import Speaking from '../components/Speaking.astro';
+import OpenSource from '../components/OpenSource.astro';
+import Skills from '../components/Skills.astro';
 import Contact from '../components/Contact.astro';
 import resumeData from '../data/resume.json';
 ---
@@ -20,17 +20,17 @@ import resumeData from '../data/resume.json';
     <!-- Hero + About combined in Hero component -->
     <Hero />
 
-    <!-- Skills Overview -->
-    <Skills />
-
     <!-- Published Books -->
     <Books />
+
+    <!-- Speaking & Training Timeline -->
+    <Speaking />
 
     <!-- Open Source Contributions -->
     <OpenSource />
 
-    <!-- Speaking & Training Timeline -->
-    <Speaking />
+    <!-- Skills Overview -->
+    <Skills />
   </main>
 
   <!-- Experience Modal (hidden by default, shown on button click) -->

@@ -1,33 +1,111 @@
 ---
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Books', href: '#books' },
   { label: 'Speaking', href: '#speaking' },
   { label: 'Open Source', href: '#open-source' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
 ---
 
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
-  <nav class="max-w-4xl mx-auto px-6 md:px-8 py-4">
-    <ul class="flex flex-wrap gap-4 md:gap-8 justify-center">
-      {navItems.map((item) => (
+  <nav class="max-w-6xl mx-auto px-6 md:px-8 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo/Name -->
+      <a href="#" class="text-xl font-bold text-gray-900">Kamal Raj Sekar</a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex gap-6 lg:gap-8 items-center">
         <li>
-          <a
-            href={item.href}
-            class="nav-link text-gray-700 hover:text-blue-500 transition-colors duration-200 font-medium text-sm md:text-base"
+          <button
+            id="nav-experience-btn"
+            class="nav-link text-gray-700 hover:text-blue-500 transition-colors duration-200 font-medium cursor-pointer bg-transparent border-none"
           >
-            {item.label}
-          </a>
+            Experience
+          </button>
         </li>
-      ))}
-    </ul>
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="nav-link text-gray-700 hover:text-blue-500 transition-colors duration-200 font-medium"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-gray-700 hover:text-blue-500 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <ul class="flex flex-col space-y-3">
+        <li>
+          <button
+            id="mobile-experience-btn"
+            class="w-full text-left nav-link-mobile text-gray-700 hover:text-blue-500 transition-colors duration-200 font-medium py-2 bg-transparent border-none cursor-pointer"
+          >
+            Experience
+          </button>
+        </li>
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="block nav-link-mobile text-gray-700 hover:text-blue-500 transition-colors duration-200 font-medium py-2"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   </nav>
 </header>
 
 <script>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = document.querySelectorAll('.nav-link-mobile');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+
+  // Experience modal triggers
+  const navExperienceBtn = document.getElementById('nav-experience-btn');
+  const mobileExperienceBtn = document.getElementById('mobile-experience-btn');
+  const modal = document.getElementById('experience-modal');
+
+  function openExperienceModal() {
+    modal?.classList.remove('hidden');
+    modal?.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    mobileMenu?.classList.add('hidden');
+  }
+
+  navExperienceBtn?.addEventListener('click', openExperienceModal);
+  mobileExperienceBtn?.addEventListener('click', openExperienceModal);
+
   // Smooth scroll and active link highlighting
   document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');

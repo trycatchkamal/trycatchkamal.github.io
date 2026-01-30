@@ -81,14 +81,25 @@
   ],
   "books": [
     {
+      "title": "Test-First Copilot - Greenfield Edition (.NET and React)",
+      "authors": "Kamal Raj Sekar, Kiran Kashyap, Vivek Ganesan",
+      "link": "https://www.amazon.in/Test-First-Copilot-Greenfield-Crafting-provably-ebook/dp/B0GHK2BFBN",
+      "asin": "B0GHK2BFBN",
+      "description": "Crafting provably high quality software using Github Copilot. A comprehensive guide to building greenfield applications with AI-powered development tools while maintaining TDD practices."
+    },
+    {
       "title": "TDD for C# and .Net Core",
       "authors": "Kamal Raj Sekar",
-      "link": "https://www.amazon.in/TDD-Net-Core-Microservices-simplified-ebook/dp/B0CW85JN2T?ref_=ast_author_dp"
+      "link": "https://www.amazon.in/TDD-Net-Core-Microservices-simplified-ebook/dp/B0CW85JN2T?ref_=ast_author_dp",
+      "asin": "B0CW85JN2T",
+      "description": "Master Test-Driven Development for .NET Core and microservices. A practical guide covering modern C# development with TDD principles, from basics to advanced patterns."
     },
     {
       "title": "TDD for Angular",
       "authors": "Vivek Ganesan, Kamal Raj Sekar",
-      "link": "https://www.amazon.in/TDD-Angular-Application-beginner-friendly-manual-ebook/dp/B0BRXMCKDJ"
+      "link": "https://www.amazon.in/TDD-Angular-Application-beginner-friendly-manual-ebook/dp/B0BRXMCKDJ",
+      "asin": "B0BRXMCKDJ",
+      "description": "A beginner-friendly manual for building robust Angular applications using Test-Driven Development. Learn to write testable code and deliver high-quality frontend applications."
     }
   ],
   "openSource": [
