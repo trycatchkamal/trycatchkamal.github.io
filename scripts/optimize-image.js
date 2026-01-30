@@ -5,8 +5,8 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const inputPath = join(__dirname, '..', 'assets', 'images', 'profile.jpg');
-const outputPath = join(__dirname, '..', 'public', 'profile.jpg');
+const inputPath = join(__dirname, '..', 'assets', 'images', 'profile.jpeg');
+const outputPath = join(__dirname, '..', 'public', 'profile.jpeg');
 
 sharp(inputPath)
   .resize(400, 400, { fit: 'cover', position: 'center' })

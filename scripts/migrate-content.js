@@ -16,7 +16,7 @@ const resumeData = {
   profile: {
     name: data.sidebar.name,
     tagline: data.sidebar.tagline,
-    avatar: '/profile.jpg',
+    avatar: '/profile.jpeg',
     email: data.sidebar.email,
     linkedin: data.sidebar.linkedin,
     github: data.sidebar.github,
