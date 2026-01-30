@@ -1,15 +1,30 @@
 ---
 import resumeData from '../data/resume.json';
-const { profile, summary, whitepaper } = resumeData;
+const { profile, summary, whitepaper, ampyard } = resumeData;
 
-// Function to make whitepaper title clickable in text
+// Function to make whitepaper title and Ampyard clickable in text
 function processText(text: string) {
   const whitepaperPattern = `'${whitepaper.title}'`;
-  if (text.includes(whitepaperPattern)) {
+  const ampyardPattern = ampyard.name;
+
+  // Check if text contains both
+  if (text.includes(whitepaperPattern) && text.includes(ampyardPattern)) {
+    // Split by Ampyard first, then by whitepaper in the second part
+    const ampyardParts = text.split(ampyardPattern);
+    const whitepaperParts = ampyardParts[1].split(whitepaperPattern);
+    return {
+      parts: [ampyardParts[0], whitepaperParts[0], whitepaperParts[1]],
+      hasWhitepaper: true,
+      hasAmpyard: true
+    };
+  } else if (text.includes(whitepaperPattern)) {
     const parts = text.split(whitepaperPattern);
-    return { parts, hasWhitepaper: true };
+    return { parts, hasWhitepaper: true, hasAmpyard: false };
+  } else if (text.includes(ampyardPattern)) {
+    const parts = text.split(ampyardPattern);
+    return { parts, hasWhitepaper: false, hasAmpyard: true };
   }
-  return { parts: [text], hasWhitepaper: false };
+  return { parts: [text], hasWhitepaper: false, hasAmpyard: false };
 }
 ---
 
@@ -63,10 +78,32 @@ function processText(text: string) {
       </h2>
       <div class="prose prose-lg max-w-none">
         {summary.split('\n\n').map(para => {
-          const { parts, hasWhitepaper } = processText(para.trim());
+          const { parts, hasWhitepaper, hasAmpyard } = processText(para.trim());
           return (
             <p class="mb-4 text-gray-700 leading-relaxed">
-              {hasWhitepaper ? (
+              {hasWhitepaper && hasAmpyard ? (
+                <>
+                  {parts[0]}
+                  <a
+                    href={ampyard.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    {ampyard.name}
+                  </a>
+                  {parts[1]}
+                  <a
+                    href={whitepaper.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    '{whitepaper.title}'
+                  </a>
+                  {parts[2]}
+                </>
+              ) : hasWhitepaper ? (
                 <>
                   {parts[0]}
                   <a
@@ -76,6 +113,19 @@ function processText(text: string) {
                     class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
                   >
                     '{whitepaper.title}'
+                  </a>
+                  {parts[1]}
+                </>
+              ) : hasAmpyard ? (
+                <>
+                  {parts[0]}
+                  <a
+                    href={ampyard.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    {ampyard.name}
                   </a>
                   {parts[1]}
                 </>
