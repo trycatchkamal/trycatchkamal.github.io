@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #3b82f6;
+  --color-accent-dark: #1d4ed8;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -16,11 +21,20 @@
   }
 
   .card {
-    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 transition-all duration-300 hover:shadow-md hover:border-accent;
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 transition-all duration-300 hover:shadow-md;
+  }
+
+  .card:hover {
+    border-color: #3b82f6;
   }
 
   .badge {
-    @apply inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-800 font-medium hover:border-accent hover:text-accent transition-colors duration-200;
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-800 font-medium transition-colors duration-200;
+  }
+
+  .badge:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
   }
 }
 

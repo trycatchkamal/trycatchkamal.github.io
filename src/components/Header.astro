@@ -17,7 +17,7 @@ const navItems = [
         <li>
           <a
             href={item.href}
-            class="nav-link text-gray-700 hover:text-accent transition-colors duration-200 font-medium text-sm md:text-base"
+            class="nav-link text-gray-700 hover:text-blue-500 transition-colors duration-200 font-medium text-sm md:text-base"
           >
             {item.label}
           </a>
@@ -43,11 +43,11 @@ const navItems = [
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
           navLinks.forEach(link => {
-            link.classList.remove('text-accent');
+            link.classList.remove('text-blue-500');
             link.classList.add('text-gray-700');
             if (link.getAttribute('href') === `#${sectionId}`) {
               link.classList.remove('text-gray-700');
-              link.classList.add('text-accent');
+              link.classList.add('text-blue-500');
             }
           });
         }
