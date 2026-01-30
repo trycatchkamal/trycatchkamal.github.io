@@ -1,25 +1,61 @@
 ---
 import resumeData from '../data/resume.json';
-const { profile } = resumeData;
+const { profile, summary } = resumeData;
 ---
 
-<section class="section-container text-center">
-  <img
-    src={profile.avatar}
-    alt={profile.name}
-    class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover shadow-lg"
-  />
+<section class="section-container">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Left: Hero -->
+    <div class="text-center lg:text-left">
+      <img
+        src={profile.avatar}
+        alt={profile.name}
+        class="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto lg:mx-0 mb-6 object-cover shadow-xl ring-4 ring-blue-100"
+      />
 
-  <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">{profile.name}</h1>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 leading-tight">
+        {profile.name}
+      </h1>
 
-  <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-    {profile.tagline}
-  </p>
+      <p class="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+        {profile.tagline}
+      </p>
 
-  <a
-    href={`mailto:${profile.email}`}
-    class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
-  >
-    Get in Touch
-  </a>
+      <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+        <a
+          href={`mailto:${profile.email}`}
+          class="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Get in Touch
+        </a>
+        <button
+          id="view-experience-btn"
+          class="inline-flex items-center bg-white hover:bg-gray-50 text-blue-600 font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg border-2 border-blue-500"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          View Experience
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: About Me -->
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900 flex items-center">
+        <svg class="w-8 h-8 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+        </svg>
+        About Me
+      </h2>
+      <div class="prose prose-lg max-w-none">
+        {summary.split('\n\n').map(para => (
+          <p class="mb-4 text-gray-700 leading-relaxed">{para.trim()}</p>
+        ))}
+      </div>
+    </div>
+  </div>
 </section>

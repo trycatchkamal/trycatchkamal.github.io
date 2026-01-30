@@ -1,6 +1,6 @@
 ---
 import resumeData from '../data/resume.json';
-const { experience } = resumeData;
+const { experience, education, certifications } = resumeData;
 
 // Helper function to split details into bullet points
 function getDetails(details: string): string[] {
@@ -11,35 +11,118 @@ function getDetails(details: string): string[] {
 }
 ---
 
-<section id="experience" class="section-container">
-  <div class="mb-12 scroll-mt-24">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-2 text-gray-900">Professional Experience</h2>
-  </div>
+<!-- Experience Modal -->
+<div id="experience-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+    <!-- Modal Header -->
+    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-6 flex justify-between items-center">
+      <h2 class="text-3xl font-bold">Professional Journey</h2>
+      <button id="close-modal-btn" class="text-white hover:text-gray-200 transition-colors">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
 
-  <div class="space-y-12">
-    {experience.map((job) => (
-      <div class="relative pl-8 border-l-2 border-gray-300 last:border-transparent">
-        <div class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+    <!-- Modal Content -->
+    <div class="overflow-y-auto flex-1 p-8">
+      <!-- Education & Certifications -->
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-blue-50 rounded-xl p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+            </svg>
+            Education
+          </h3>
+          <p class="font-medium text-gray-900">{education.degree}</p>
+          <p class="text-gray-600">{education.institution}</p>
+          <p class="text-sm text-gray-500 mt-1">{education.period}</p>
+        </div>
 
-        <div class="card">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">{job.role}</h3>
-              <p class="text-blue-500 font-medium">{job.company}</p>
+        <div class="bg-yellow-50 rounded-xl p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+            Certifications
+          </h3>
+          {certifications.map(cert => (
+            <div class="mb-3 last:mb-0">
+              <p class="font-medium text-gray-900">{cert.name}</p>
+              <p class="text-sm text-gray-600">{cert.description}</p>
+              <p class="text-sm text-gray-500 mt-1">{cert.year}</p>
             </div>
-            <span class="text-sm text-gray-500 mt-1 md:mt-0">{job.period}</span>
-          </div>
-
-          <ul class="space-y-2">
-            {getDetails(job.details).map(detail => (
-              <li class="text-gray-700 flex items-start">
-                <span class="text-blue-500 mr-2 flex-shrink-0">★</span>
-                <span>{detail}</span>
-              </li>
-            ))}
-          </ul>
+          ))}
         </div>
       </div>
-    ))}
+
+      <!-- Work Experience Timeline -->
+      <h3 class="text-2xl font-bold mb-8 text-gray-900">Work Experience</h3>
+      <div class="space-y-8">
+        {experience.map((job, index) => (
+          <div class="relative pl-8 border-l-2 border-blue-200 last:border-transparent pb-8">
+            <div class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h4 class="text-xl font-semibold text-gray-900">{job.role}</h4>
+                  <p class="text-blue-500 font-medium text-lg">{job.company}</p>
+                </div>
+                <span class="text-sm text-gray-500 mt-1 md:mt-0 bg-blue-50 px-3 py-1 rounded-full">{job.period}</span>
+              </div>
+
+              <ul class="space-y-2">
+                {getDetails(job.details).map(detail => (
+                  <li class="text-gray-700 flex items-start">
+                    <span class="text-blue-500 mr-2 flex-shrink-0">★</span>
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
-</section>
+</div>
+
+<script>
+  const modal = document.getElementById('experience-modal');
+  const viewBtn = document.getElementById('view-experience-btn');
+  const closeBtn = document.getElementById('close-modal-btn');
+
+  viewBtn?.addEventListener('click', () => {
+    modal?.classList.remove('hidden');
+    modal?.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    modal?.classList.add('hidden');
+    modal?.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Close on outside click
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
