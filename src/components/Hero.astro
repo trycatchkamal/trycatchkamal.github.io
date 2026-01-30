@@ -1,6 +1,16 @@
 ---
 import resumeData from '../data/resume.json';
-const { profile, summary } = resumeData;
+const { profile, summary, whitepaper } = resumeData;
+
+// Function to make whitepaper title clickable in text
+function processText(text: string) {
+  const whitepaperPattern = `'${whitepaper.title}'`;
+  if (text.includes(whitepaperPattern)) {
+    const parts = text.split(whitepaperPattern);
+    return { parts, hasWhitepaper: true };
+  }
+  return { parts: [text], hasWhitepaper: false };
+}
 ---
 
 <section class="section-container">
@@ -52,9 +62,27 @@ const { profile, summary } = resumeData;
         About Me
       </h2>
       <div class="prose prose-lg max-w-none">
-        {summary.split('\n\n').map(para => (
-          <p class="mb-4 text-gray-700 leading-relaxed">{para.trim()}</p>
-        ))}
+        {summary.split('\n\n').map(para => {
+          const { parts, hasWhitepaper } = processText(para.trim());
+          return (
+            <p class="mb-4 text-gray-700 leading-relaxed">
+              {hasWhitepaper ? (
+                <>
+                  {parts[0]}
+                  <a
+                    href={whitepaper.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    '{whitepaper.title}'
+                  </a>
+                  {parts[1]}
+                </>
+              ) : parts[0]}
+            </p>
+          );
+        })}
       </div>
     </div>
   </div>
