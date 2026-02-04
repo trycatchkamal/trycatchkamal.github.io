@@ -119,6 +119,11 @@
       "description": "Contributed to Google Gemini CLI fixing some bugs and refactor"
     },
     {
+      "title": "GitHub Awesome Copilot List",
+      "link": "https://github.com/github/awesome-copilot/pull/661",
+      "description": "Contributed a new resource to the Awesome Copilot curated list"
+    },
+    {
       "title": "Microsoft GitHub Copilot - GHCP",
       "link": "https://github.com/microsoft/vscode-copilot-chat/pull/207",
       "description": "Contributed to GHCP on some refactor"
