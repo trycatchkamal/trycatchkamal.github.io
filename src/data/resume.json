@@ -93,8 +93,7 @@
     {
       "title": "Test-First Copilot - Greenfield Edition (.NET and React)",
       "authors": "Kamal Raj Sekar, Kiran Kashyap, Vivek Ganesan",
-      "link": "https://www.amazon.in/Test-First-Copilot-Greenfield-Crafting-provably-ebook/dp/B0GHK2BFBN",
-      "asin": "B0GHK2BFBN",
+      "link": "https://leanpub.com/testfirstcopilot",
       "description": "Crafting provably high quality software using Github Copilot. A comprehensive guide to building greenfield applications with AI-powered development tools while maintaining TDD practices."
     },
     {
