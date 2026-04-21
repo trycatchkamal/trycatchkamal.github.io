@@ -8,25 +8,22 @@
     "github": "trycatchkamal",
     "twitter": "notifykamalraj"
   },
-  "whitepaper": {
-    "title": "Real Productivity, Rare Pushbacks",
-    "link": "https://www.ampyard.com/resources/whitepapers/real-producitivty-rare-pushbacks-ai-agents/"
-  },
   "ampyard": {
     "name": "Ampyard",
     "link": "https://www.ampyard.com/"
   },
-  "summary": "I help organizations become technically agile and leverage AI throughout their engineering processes wherever applicable. Through Ampyard, we provide custom AI workshops tailored to your business context and tech stack.\n\nWith 15+ years experience, I've co-created AI products (FaceQuest and Notesally), authored books on TDD and AI-augmented development, and written the white paper 'Real Productivity, Rare Pushbacks' on AI agents. I work with teams from startups to Fortune 500s, helping them ship quality software using proven engineering practices and modern AI tools.",
+  "summary": "I help organizations become technically agile and leverage AI throughout their engineering processes wherever applicable. Through Ampyard, we provide custom AI workshops tailored to your business context and tech stack.\n\nWith 15+ years experience, I've co-created AI products (FaceQuest and Notesally), authored books on TDD and AI-augmented development, co-authored the research paper 'Agentic Code Surgery for Brownfield Systems' published on Zenodo (2026), and written the white paper 'Real Productivity, Rare Pushbacks' on AI agents. I work with teams from startups to Fortune 500s, helping them ship quality software using proven engineering practices and modern AI tools.",
   "experience": [
     {
       "role": "Tech Agile Coach & AI Consultant | Cofounder & Director",
       "company": "Ampyard",
       "period": "March 2019 – Present",
-      "details": "★ Provide Tech Agility Coaching and AI Consulting to startups and Fortune 500 companies, helping teams adopt modern engineering practices and AI-augmented workflows.\n\n★ Deliver custom AI workshops tailored to clients' business context, use cases, and tech stacks.\n\n★ Authored the whitepaper 'Real Productivity, Rare Pushbacks' on integrating AI agents into product development.\n\n★ Built MVPs for two AI SaaS products:\n- **FaceQuest** – AI-powered facial recognition platform (1:1 verification & 1:N search)\n- **Notesally** – AI assistant for sales productivity and CRM data quality",
+      "details": "★ Provide Tech Agility Coaching and AI Consulting to startups and Fortune 500 companies, helping teams adopt modern engineering practices and AI-augmented workflows.\n\n★ Deliver custom AI workshops tailored to clients' business context, use cases, and tech stacks.\n\n★ Authored the whitepaper 'Real Productivity, Rare Pushbacks' on integrating AI agents into product development.\n\n★ Co-authored the research paper 'Agentic Code Surgery for Brownfield Systems' (Zenodo, 2026) - a seven-agent workflow that disciplines AI assistants with characterization tests before touching brownfield code.\n\n★ Built MVPs for two AI SaaS products:\n- **FaceQuest** – AI-powered facial recognition platform (1:1 verification & 1:N search)\n- **Notesally** – AI assistant for sales productivity and CRM data quality",
       "highlights": [
         "Provide Tech Agility Coaching and AI Consulting to startups and Fortune 500 companies",
         "Deliver custom AI workshops tailored to clients' business context and tech stacks",
         "Authored whitepaper on AI agents in product development",
+        "Co-authored research paper 'Agentic Code Surgery for Brownfield Systems' (Zenodo, 2026)",
         "Built AI SaaS - FaceQuest (facial recognition) and Notesally (AI sales assistant) and few other SaaS Products"
       ]
     },
@@ -112,6 +109,29 @@
       "description": "A beginner-friendly manual for building robust Angular applications using Test-Driven Development. Learn to write testable code and deliver high-quality frontend applications."
     }
   ],
+  "publications": [
+    {
+      "title": "Agentic Code Surgery for Brownfield Systems",
+      "authors": "Vivek Ganesan, Kiran Kashyap, Kamal Raj Sekar",
+      "year": "2026",
+      "publisher": "Zenodo",
+      "doi": "https://doi.org/10.5281/zenodo.19640171",
+      "link": "https://zenodo.org/records/19640171",
+      "description": "Proposes a seven-agent workflow - Plan, Map, Break, Cover, Implement, Refactor, Finish - that forces an AI assistant to characterize existing behavior with tests before touching code. Applied to a real brownfield codebase, this workflow produced 43 new passing tests (raising statement coverage from 0.85% to 16.78%) vs. zero new tests with a regular approach, and avoided all critical and major bugs the regular approach introduced.",
+      "type": "Preprint",
+      "community": "Empirical Software Engineering"
+    },
+    {
+      "title": "Real Productivity, Rare Pushbacks",
+      "authors": "Kamal Raj Sekar",
+      "year": "2024",
+      "publisher": "Ampyard",
+      "doi": null,
+      "link": "https://www.ampyard.com/resources/whitepapers/real-producitivty-rare-pushbacks-ai-agents/",
+      "description": "A whitepaper on integrating AI agents into product development workflows. Explores practical strategies for adopting AI-augmented engineering while maintaining quality and team productivity.",
+      "type": "Whitepaper"
+    }
+  ],
   "openSource": [
     {
       "title": "Google Gemini CLI",
@@ -127,6 +147,21 @@
       "title": "Microsoft GitHub Copilot - GHCP",
       "link": "https://github.com/microsoft/vscode-copilot-chat/pull/207",
       "description": "Contributed to GHCP on some refactor"
+    },
+    {
+      "title": "Gauzer",
+      "link": "https://github.com/trycatchkamal/gauzer",
+      "description": "Observability-first struct validation library for Go. Drop-in struct tags, 61ns zero-alloc performance, and native slog/OTel telemetry on every failure - so validation errors land in Datadog, CloudWatch, or Azure Monitor as queryable structured events, not strings you have to parse."
+    },
+    {
+      "title": "playwright-specgen",
+      "link": "https://www.npmjs.com/package/playwright-specgen",
+      "description": "Turns Playwright trace.zip files into readable user-flow YAMLs, API maps, and executable test files - automatically. The missing observation layer between recorded human behaviour and AI agent operation: gives coding agents (Copilot, Cursor, Claude) machine-readable behavioural specs instead of opaque legacy code."
+    },
+    {
+      "title": "filesystemwatcher-mcp",
+      "link": "https://pypi.org/project/filesystemwatcher-mcp/",
+      "description": "MCP server that gives AI coding agents (Gemini, Claude, Cursor, Copilot) event-driven access to file-system changes - creations, modifications, deletions, and moves - without busy-polling. Built on Watchdog with cross-platform native OS events and strict safety guardrails."
     },
     {
       "title": "Azure Notification Hubs",
@@ -198,7 +233,6 @@
   ],
   "education": {
     "degree": "B.Tech, Information Technology",
-    "institution": "SASTRA University",
-    "period": "2005 – 2009"
+    "institution": "SASTRA University"
   }
 }

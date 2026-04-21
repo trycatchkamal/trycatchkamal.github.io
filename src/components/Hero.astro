@@ -1,30 +1,50 @@
 ---
 import resumeData from '../data/resume.json';
-const { profile, summary, whitepaper, ampyard } = resumeData;
+const { profile, summary, publications, ampyard } = resumeData;
+const whitepaper = publications.find(p => p.type === 'Whitepaper')!;
+const preprint = publications.find(p => p.type === 'Preprint')!;
 
-// Function to make whitepaper title and Ampyard clickable in text
+// Function to make whitepaper title, preprint title, and Ampyard clickable in text
 function processText(text: string) {
   const whitepaperPattern = `'${whitepaper.title}'`;
+  const preprintPattern = `'${preprint.title}'`;
   const ampyardPattern = ampyard.name;
 
-  // Check if text contains both
-  if (text.includes(whitepaperPattern) && text.includes(ampyardPattern)) {
+  const hasWhitepaper = text.includes(whitepaperPattern);
+  const hasPreprint = text.includes(preprintPattern);
+  const hasAmpyard = text.includes(ampyardPattern);
+
+  // Paragraph with both preprint and whitepaper (no Ampyard)
+  if (hasPreprint && hasWhitepaper && !hasAmpyard) {
+    const preprintParts = text.split(preprintPattern);
+    const whitepaperParts = preprintParts[1].split(whitepaperPattern);
+    return {
+      parts: [preprintParts[0], whitepaperParts[0], whitepaperParts[1]],
+      hasWhitepaper: true,
+      hasPreprint: true,
+      hasAmpyard: false
+    };
+  } else if (hasWhitepaper && hasAmpyard) {
     // Split by Ampyard first, then by whitepaper in the second part
     const ampyardParts = text.split(ampyardPattern);
     const whitepaperParts = ampyardParts[1].split(whitepaperPattern);
     return {
       parts: [ampyardParts[0], whitepaperParts[0], whitepaperParts[1]],
       hasWhitepaper: true,
+      hasPreprint: false,
       hasAmpyard: true
     };
-  } else if (text.includes(whitepaperPattern)) {
+  } else if (hasWhitepaper) {
     const parts = text.split(whitepaperPattern);
-    return { parts, hasWhitepaper: true, hasAmpyard: false };
-  } else if (text.includes(ampyardPattern)) {
+    return { parts, hasWhitepaper: true, hasPreprint: false, hasAmpyard: false };
+  } else if (hasPreprint) {
+    const parts = text.split(preprintPattern);
+    return { parts, hasWhitepaper: false, hasPreprint: true, hasAmpyard: false };
+  } else if (hasAmpyard) {
     const parts = text.split(ampyardPattern);
-    return { parts, hasWhitepaper: false, hasAmpyard: true };
+    return { parts, hasWhitepaper: false, hasPreprint: false, hasAmpyard: true };
   }
-  return { parts: [text], hasWhitepaper: false, hasAmpyard: false };
+  return { parts: [text], hasWhitepaper: false, hasPreprint: false, hasAmpyard: false };
 }
 ---
 
@@ -112,10 +132,32 @@ function processText(text: string) {
       </h2>
       <div class="prose prose-lg max-w-none">
         {summary.split('\n\n').map(para => {
-          const { parts, hasWhitepaper, hasAmpyard } = processText(para.trim());
+          const { parts, hasWhitepaper, hasPreprint, hasAmpyard } = processText(para.trim());
           return (
             <p class="mb-4 text-gray-700 leading-relaxed">
-              {hasWhitepaper && hasAmpyard ? (
+              {hasPreprint && hasWhitepaper ? (
+                <>
+                  {parts[0]}
+                  <a
+                    href={preprint.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    '{preprint.title}'
+                  </a>
+                  {parts[1]}
+                  <a
+                    href={whitepaper.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    '{whitepaper.title}'
+                  </a>
+                  {parts[2]}
+                </>
+              ) : hasWhitepaper && hasAmpyard ? (
                 <>
                   {parts[0]}
                   <a
@@ -147,6 +189,19 @@ function processText(text: string) {
                     class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
                   >
                     '{whitepaper.title}'
+                  </a>
+                  {parts[1]}
+                </>
+              ) : hasPreprint ? (
+                <>
+                  {parts[0]}
+                  <a
+                    href={preprint.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                  >
+                    '{preprint.title}'
                   </a>
                   {parts[1]}
                 </>
