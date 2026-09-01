@@ -17,7 +17,22 @@
       "Bash(git rm:*)",
       "Bash(gh run:*)",
       "WebFetch(domain:www.amazon.in)",
-      "Bash(npm run preview:*)"
+      "Bash(npm run preview:*)",
+      "Bash(rtk ls *)",
+      "WebFetch(domain:vivekganesan.com)",
+      "Bash(rtk read *)",
+      "Bash(rtk npm *)",
+      "Bash(rtk grep *)",
+      "Bash(python -c ' *)",
+      "Bash(rtk curl *)",
+      "Bash(python -)",
+      "Bash(python \"C:\\\\Users\\\\Kamal-PC\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--source-codes-kamalrajsekar-github-io\\\\b7428a1b-3d90-4489-9ae8-2e092c802d54\\\\scratchpad\\\\checklinks.py\")",
+      "Bash(gh auth *)",
+      "WebFetch(domain:github.com)",
+      "Bash(rtk npx *)",
+      "Bash(node *)",
+      "WebFetch(domain:kamalxplains.substack.com)",
+      "Bash(npm ls *)"
     ]
   }
 }

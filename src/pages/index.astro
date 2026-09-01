@@ -2,44 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import Experience from '../components/Experience.astro';
-import Books from '../components/Books.astro';
-import Publications from '../components/Publications.astro';
-import Speaking from '../components/Speaking.astro';
+import Expertise from '../components/Expertise.astro';
 import OpenSource from '../components/OpenSource.astro';
-import Skills from '../components/Skills.astro';
 import Contact from '../components/Contact.astro';
 import resumeData from '../data/resume.json';
 ---
 
 <Layout
-  title={`${resumeData.profile.name} - Resume`}
-  description={resumeData.summary}
+  title={`${resumeData.profile.name} - AI Consultant & Tech Coach`}
+  description="I help technology leaders and their teams put AI to work across the engineering process and ship quality software, backed by proven engineering practices."
 >
   <Header />
   <main>
-    <!-- Hero + About combined in Hero component -->
     <Hero />
-
-    <!-- Published Books -->
-    <Books />
-
-    <!-- Research Papers -->
-    <Publications />
-
-    <!-- Speaking & Training Timeline -->
-    <Speaking />
-
-    <!-- Open Source Contributions -->
+    <Expertise />
     <OpenSource />
-
-    <!-- Skills Overview -->
-    <Skills />
   </main>
 
-  <!-- Experience Modal (hidden by default, shown on button click) -->
-  <Experience />
-
-  <!-- Contact Footer -->
   <Contact />
 </Layout>

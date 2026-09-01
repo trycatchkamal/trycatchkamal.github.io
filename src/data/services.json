@@ -1,0 +1,54 @@
+[
+  {
+    "number": "01",
+    "title": "AI advisory",
+    "audience": "For CXOs, founders, and heads of engineering",
+    "description": "Where AI actually fits in your business, what to build and what to buy, and which workflows are worth making agentic first. I still build and ship AI products myself, so the advice comes from inside the work rather than from a deck.",
+    "points": [
+      "An unbiased read on vendors and where your money is going",
+      "Which parts of your operations are worth making agentic first",
+      "Advice from someone still shipping agents in production"
+    ],
+    "href": "/services#ai-advisory",
+    "label": "How advisory works"
+  },
+  {
+    "number": "02",
+    "title": "Tech coaching",
+    "audience": "For teams shipping to production",
+    "description": "Working with your team on how they build — TDD, BDD, clean code, continuous delivery — and fixing the problem rather than the symptom. These practices matter more now as AI is writing most of the code, not less.",
+    "points": [
+      "Working alongside your team, not presenting at them",
+      "The practices that keep quality up as the pace goes up",
+      "Habits that stay after I leave"
+    ],
+    "href": "/services#tech-coaching",
+    "label": "How coaching works"
+  },
+  {
+    "number": "03",
+    "title": "1:1 mentoring",
+    "audience": "For engineering leaders and senior engineers",
+    "description": "Regular sessions to unblock your teams and think through the calls you’re not sure about. Bring whatever is actually bothering you — an agent that keeps going sideways, a roadmap you want a second opinion on, a team that has quietly stopped reviewing what the model writes.",
+    "points": [
+      "Roadmap and agent-programme reviews between sessions",
+      "Practical guidance on tools, patterns, and guardrails",
+      "Direct feedback on what your teams are building"
+    ],
+    "href": "/services#mentoring",
+    "label": "How mentoring works"
+  },
+  {
+    "number": "04",
+    "title": "AI workshops",
+    "audience": "For product and engineering teams",
+    "description": "A few days with your engineers, working in your own codebase instead of a demo project. They leave knowing how to test and review AI-written code — the way I wrote it up in Test-First Copilot, taught to real teams since.",
+    "points": [
+      "Live coding in your real codebase, on your stack",
+      "Test-first patterns that hold when an agent writes the code",
+      "Quality guardrails for review, CI, and merging agent output"
+    ],
+    "href": "/services#workshops",
+    "label": "What a workshop covers"
+  }
+]

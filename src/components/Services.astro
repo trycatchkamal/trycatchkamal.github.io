@@ -1,0 +1,35 @@
+---
+import services from '../data/services.json';
+---
+
+<section id="services" class="section-light">
+  <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+    <div class="max-w-3xl">
+      <p class="eyebrow">What I do</p>
+      <h2 class="section-title">Four ways I can help you.</h2>
+      <p class="section-lede">
+        Whether you&rsquo;re deciding where AI fits, leading the rollout, or the one
+        who has to make it work in the codebase.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map((service) => (
+        <a
+          href={service.href}
+          class="group flex min-h-52 flex-col bg-white p-7 transition duration-300 hover:bg-[#f7f7f4] md:p-8"
+        >
+          <p class="text-sm font-bold text-blue-600">{service.number}</p>
+          <h3 class="mt-10 text-xl font-bold tracking-[-0.03em] text-slate-950 transition-colors group-hover:text-blue-600">
+            {service.title}
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">{service.audience}</p>
+          <span class="mt-auto pt-6 text-sm font-semibold text-slate-950 transition group-hover:text-blue-600">
+            {service.label}
+            <span class="ml-1 inline-block transition group-hover:translate-x-1" aria-hidden="true">↗</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

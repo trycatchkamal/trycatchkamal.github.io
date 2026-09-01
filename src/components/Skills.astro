@@ -3,27 +3,24 @@ import resumeData from '../data/resume.json';
 const { skills } = resumeData;
 ---
 
-<section id="skills" class="section-container bg-gradient-to-br from-indigo-50 to-blue-50">
-  <div class="mb-12 scroll-mt-24 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900 flex items-center justify-center">
-      <svg class="w-10 h-10 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-      </svg>
-      Skills & Expertise
-    </h2>
-    <p class="text-gray-600 text-lg">Core competencies and technical proficiencies</p>
-  </div>
+<section id="skills" class="section-dark">
+  <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+    <div class="max-w-3xl">
+      <p class="eyebrow-dark">Expertise</p>
+      <h2 class="section-title-dark">What I can help you with.</h2>
+      <p class="section-lede-dark">
+        AI adoption on one side, engineering craft on the other. In practice you
+        never get one without the other.
+      </p>
+    </div>
 
-  <div class="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
-    {skills.map((skill, index) => (
-      <span class="group relative bg-white hover:bg-gradient-to-r hover:from-indigo-500 hover:to-blue-500 text-gray-800 hover:text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-indigo-200 hover:border-transparent transform hover:scale-105 cursor-default">
-        <span class="flex items-center">
-          <svg class="w-5 h-5 mr-2 text-indigo-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+    <ul class="mt-12 flex max-w-5xl flex-wrap gap-3">
+      {skills.map((skill) => (
+        <li class="inline-flex items-center rounded-full border border-slate-700 bg-slate-900 px-5 py-3 font-semibold text-slate-100 transition duration-300 hover:border-cyan-300 hover:text-cyan-200">
+          <span class="mr-2.5 h-1.5 w-1.5 rounded-full bg-cyan-300" aria-hidden="true"></span>
           {skill}
-        </span>
-      </span>
-    ))}
+        </li>
+      ))}
+    </ul>
   </div>
 </section>

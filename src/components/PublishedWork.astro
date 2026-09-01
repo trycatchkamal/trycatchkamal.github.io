@@ -1,0 +1,63 @@
+---
+import resumeData from '../data/resume.json';
+const { books, publications, writing } = resumeData;
+
+const strands = [
+  {
+    title: 'Books',
+    count: `${books.length} on Leanpub`,
+    description:
+      'Test-driven development and AI-assisted coding, including Test-First Copilot.',
+    href: '/published-work#books'
+  },
+  {
+    title: 'Research',
+    count: `${publications.length} published`,
+    description:
+      'Peer-reviewed work on agentic refactoring, and a white paper on AI agents in real product teams.',
+    href: '/published-work#research'
+  },
+  {
+    title: 'Newsletter',
+    count: writing.name,
+    description: writing.tagline,
+    href: '/published-work#writing'
+  }
+];
+---
+
+<section id="published-work" class="section-light">
+  <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+    <div class="max-w-3xl">
+      <p class="eyebrow">Publications</p>
+      <h2 class="section-title">Books &amp; writings.</h2>
+      <p class="section-lede">
+        Books, research papers, and a newsletter &mdash; on AI, software
+        engineering, and technical agility.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-slate-200 bg-slate-200 md:grid-cols-3">
+      {strands.map((strand) => (
+        <a
+          href={strand.href}
+          class="group flex min-h-56 flex-col bg-white p-7 transition duration-300 hover:bg-[#f7f7f4] md:p-8"
+        >
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-blue-600">
+            {strand.count}
+          </p>
+          <h3 class="mt-8 text-2xl font-bold tracking-[-0.03em] text-slate-950 transition-colors group-hover:text-blue-600">
+            {strand.title}
+          </h3>
+          <p class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">
+            {strand.description}
+          </p>
+          <span class="mt-auto pt-6 text-sm font-semibold text-slate-950 transition group-hover:text-blue-600">
+            Take a look
+            <span class="ml-1 inline-block transition group-hover:translate-x-1" aria-hidden="true">→</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

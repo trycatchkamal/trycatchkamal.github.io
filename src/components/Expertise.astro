@@ -1,0 +1,102 @@
+---
+// Routes to the detail already on the site: books and papers below, /talks,
+// /open-source. Kept to what the resume data can back up.
+const areas = [
+  {
+    title: 'AI educator',
+    description:
+      'Teaching engineers to use AI well on real software, not demos — where design thinking, code quality, and a bit of discipline still decide the outcome.',
+    href: '/services#workshops',
+    label: 'How I teach'
+  },
+  {
+    title: 'Tech coach',
+    description:
+      'Working alongside teams on TDD, BDD, refactoring, and continuous delivery — improving how they build rather than handing over a report on it.',
+    href: '/services#tech-coaching',
+    label: 'How coaching works'
+  },
+  {
+    title: 'Published author',
+    description:
+      'Three books on TDD and AI-assisted coding, including Test-First Copilot, plus two published papers on agentic refactoring and AI-assisted delivery.',
+    highlight: ['TDD', 'Test-First Copilot'],
+    href: '/published-work',
+    label: 'Books and papers'
+  },
+  {
+    title: 'Conference speaker',
+    description:
+      'I speak at international conferences on AI, technical agility, and software engineering.',
+    href: '/talks',
+    label: 'See all talks'
+  },
+  {
+    title: 'SaaS entrepreneur',
+    description:
+      'Cofounder of Ampyard, where we build and ship our own products. It keeps the advice honest — I run into the same problems you do.',
+    href: 'https://www.ampyard.com/',
+    label: 'See what we build',
+    external: true
+  },
+  {
+    title: 'Open source',
+    description:
+      'Merged pull requests in the tools people actually use — Gemini CLI, VS Code Copilot Chat, Akka HTTP — plus my own tools for spec tracing and test generation.',
+    href: '/open-source',
+    label: 'View contributions'
+  }
+];
+---
+
+<section id="expertise" class="section-paper">
+  <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+    <div class="max-w-3xl">
+      <p class="eyebrow">Background</p>
+      <h2 class="section-title">Where I spend my time.</h2>
+      <p class="section-lede">
+        Still writing code, still teaching, and still turning up to argue about
+        it on stage.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-slate-200 bg-slate-200 md:grid-cols-2 lg:grid-cols-3">
+      {areas.map((area, i) => (
+        <a
+          href={area.href}
+          target={area.external ? '_blank' : undefined}
+          rel={area.external ? 'noopener noreferrer' : undefined}
+          class:list={[
+            'group flex min-h-60 flex-col p-7 transition duration-300 md:p-8',
+            i % 2 === 0
+              ? 'bg-white hover:bg-[#f7f7f4]'
+              : 'bg-[#f7f7f4] hover:bg-white'
+          ]}
+        >
+          <h3 class="text-xl font-bold tracking-[-0.03em] text-slate-950 transition-colors group-hover:text-blue-600">
+            {area.title}
+          </h3>
+          <p class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">
+            {area.highlight
+              ? area.description
+                  // Split on the highlighted phrases, keeping them as captures
+                  // so the odd-indexed pieces are the ones to emphasise.
+                  .split(new RegExp(`(${area.highlight.join('|')})`))
+                  .map((piece) =>
+                    area.highlight.includes(piece)
+                      ? <em class="font-semibold not-italic text-slate-950 decoration-blue-400/60 decoration-2 underline-offset-4 [text-decoration-line:underline]">{piece}</em>
+                      : piece
+                  )
+              : area.description}
+          </p>
+          <span class="mt-auto pt-6 text-sm font-semibold text-slate-950 transition group-hover:text-blue-600">
+            {area.label}
+            <span class="ml-1 inline-block transition group-hover:translate-x-1" aria-hidden="true">
+              {area.external ? '↗' : '→'}
+            </span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

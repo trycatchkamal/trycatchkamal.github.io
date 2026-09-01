@@ -1,9 +1,11 @@
 {
   "profile": {
     "name": "Kamal Raj Sekar",
-    "tagline": "2x Failed AI SaaS Maker | Published Author | Tech Agile Coach | AI Enthusiast | Speaker | Open Source Contributor",
+    "tagline": "AI Consultant · Tech Coach · Author · Speaker",
+    "intro": "I help technology leaders and their teams to put AI to work across the engineering process, make their operations agentic, and ship quality software, backed by proven engineering practices.",
     "avatar": "/profile.jpeg",
     "email": "notify.kamalraj@gmail.com",
+    "calendarUrl": "https://topmate.io/notifykamalraj/2277933",
     "linkedin": "kamalrajsekar",
     "github": "trycatchkamal",
     "twitter": "notifykamalraj"
@@ -12,15 +14,15 @@
     "name": "Ampyard",
     "link": "https://www.ampyard.com/"
   },
-  "summary": "I help organizations become technically agile and leverage AI throughout their engineering processes wherever applicable. Through Ampyard, we provide custom AI workshops tailored to your business context and tech stack.\n\nWith 15+ years experience, I've co-created AI products (FaceQuest and Notesally), authored books on TDD and AI-augmented development, co-authored the research paper 'Agentic Code Surgery for Brownfield Systems' published on Zenodo (2026), and written the white paper 'Real Productivity, Rare Pushbacks' on AI agents. I work with teams from startups to Fortune 500s, helping them ship quality software using proven engineering practices and modern AI tools.",
+  "summary": "I help your organisations leverage AI throughout the engineering processes wherever applicable, make your organization's operations agentic, and ship quality software using proven engineering practices and modern AI tools. \n\nFor 17+ years I've coached engineering teams on the practices - TDD, BDD, pair programming, refactoring, and continuous delivery. AI writes code quickly but can't tell you whether it's right, so the teams getting real value from it are the ones who already knew how to answer that question.\n\nI've co-created two AI products, written three books on TDD and AI-assisted development, co-authored 'Agentic Code Surgery for Brownfield Systems' (Zenodo, 2026), and published the white paper 'Real Productivity, Rare Pushbacks'.",
   "experience": [
     {
-      "role": "Tech Agile Coach & AI Consultant | Cofounder & Director",
+      "role": "AI Consultant & Technical Coach",
       "company": "Ampyard",
       "period": "March 2019 – Present",
-      "details": "★ Provide Tech Agility Coaching and AI Consulting to startups and Fortune 500 companies, helping teams adopt modern engineering practices and AI-augmented workflows.\n\n★ Deliver custom AI workshops tailored to clients' business context, use cases, and tech stacks.\n\n★ Authored the whitepaper 'Real Productivity, Rare Pushbacks' on integrating AI agents into product development.\n\n★ Co-authored the research paper 'Agentic Code Surgery for Brownfield Systems' (Zenodo, 2026) - a seven-agent workflow that disciplines AI assistants with characterization tests before touching brownfield code.\n\n★ Built MVPs for two AI SaaS products:\n- **FaceQuest** – AI-powered facial recognition platform (1:1 verification & 1:N search)\n- **Notesally** – AI assistant for sales productivity and CRM data quality",
+      "details": "★ Provide Technical Coaching and AI Consulting to startups and Fortune 500 companies, helping teams adopt modern engineering practices and AI-augmented workflows.\n\n★ Deliver custom AI workshops tailored to clients' business context, use cases, and tech stacks.\n\n★ Authored the whitepaper 'Real Productivity, Rare Pushbacks' on integrating AI agents into product development.\n\n★ Co-authored the research paper 'Agentic Code Surgery for Brownfield Systems' (Zenodo, 2026) - a seven-agent workflow that disciplines AI assistants with characterization tests before touching brownfield code.\n\n★ Built MVPs for two AI SaaS products:\n- **FaceQuest** – AI-powered facial recognition platform (1:1 verification & 1:N search)\n- **Notesally** – AI assistant for sales productivity and CRM data quality",
       "highlights": [
-        "Provide Tech Agility Coaching and AI Consulting to startups and Fortune 500 companies",
+        "Provide Technical Coaching and AI Consulting to startups and Fortune 500 companies",
         "Deliver custom AI workshops tailored to clients' business context and tech stacks",
         "Authored whitepaper on AI agents in product development",
         "Co-authored research paper 'Agentic Code Surgery for Brownfield Systems' (Zenodo, 2026)",
@@ -31,56 +33,56 @@
       "role": "Technology Consultant",
       "company": "TEKenable Ltd",
       "period": "April 2018 – May 2025",
-      "details": "★ Architected and developed scalable, cloud-native systems with a focus on \nautomation and quality. \n\n★ Executed Agile transformation engagements, mentoring teams on XP, \nTDD, pair programming, and DevOps culture \n\n★ Designed CI/CD pipelines on Azure, improving release velocity and \nfeedback cycles. \n\n★ Implemented Infrastructure as Code (IaC) using ARM templates for \nautomated, version-controlled deployments. \n\n★ Mentored XP champions & scrum masters in clean code, technical agility, \nand sustainable delivery practices. \n\n★ Conducted workshops on tech agility, test automation, and DevOps \npipelines.",
+      "details": "★ Architected and developed scalable, cloud-native systems with a focus on \nautomation and quality. \n\n★ Executed engineering transformation engagements, mentoring teams on XP, \nTDD, pair programming, and DevOps culture \n\n★ Designed CI/CD pipelines on Azure, improving release velocity and \nfeedback cycles. \n\n★ Implemented Infrastructure as Code (IaC) using ARM templates for \nautomated, version-controlled deployments. \n\n★ Mentored XP champions & tech leads in clean code and sustainable delivery practices. \n\n★ Conducted workshops on engineering practices, test automation, and DevOps pipelines.",
       "highlights": [
         "Architected and developed scalable, cloud-native systems with a focus on",
-        "Executed Agile transformation engagements, mentoring teams on XP,",
+        "Executed engineering transformation engagements, mentoring teams on XP,",
         "Designed CI/CD pipelines on Azure, improving release velocity and",
         "Implemented Infrastructure as Code (IaC) using ARM templates for",
-        "Mentored XP champions & scrum masters in clean code, technical agility,",
-        "Conducted workshops on tech agility, test automation, and DevOps"
+        "Mentored XP champions & tech leads in clean code and sustainable delivery",
+        "Conducted workshops on engineering practices, test automation, and DevOps"
       ]
     },
     {
       "role": "Technical Team Lead & Scrum Master",
       "company": "Greenfinch Technology Ltd",
       "period": "October 2015 – April 2018",
-      "details": "★ Modernized legacy codebases into well-architected distributed systems \nusing TDD and clean code practices.\n\n★ Drove DevOps initiatives to establish automated build, test, and \ndeployment pipelines. \n\n★ Delivered new features iteratively in tight delivery cycles, enhancing \nresponsiveness. \n\n★ Mentored cross-functional teams in Agile, XP, and continuous delivery \nbest practices.",
+      "details": "★ Modernized legacy codebases into well-architected distributed systems \nusing TDD and clean code practices.\n\n★ Drove DevOps initiatives to establish automated build, test, and \ndeployment pipelines. \n\n★ Delivered new features iteratively in tight delivery cycles, enhancing \nresponsiveness. \n\n★ Mentored cross-functional teams in XP and continuous delivery \nbest practices.",
       "highlights": [
         "Modernized legacy codebases into well-architected distributed systems",
         "Drove DevOps initiatives to establish automated build, test, and",
         "Delivered new features iteratively in tight delivery cycles, enhancing",
-        "Mentored cross-functional teams in Agile, XP, and continuous delivery"
+        "Mentored cross-functional teams in XP and continuous delivery"
       ]
     },
     {
       "role": "Senior Software Engineer",
       "company": "Philips Healthcare R&D India",
       "period": "October 2012 – September 2015",
-      "details": "★ Redesigned legacy MRI apps into modular, layered architectures. \n\n★ Developed a reflection framework that optimized UI responsiveness and \nreduced overhead. \n\n★ Championed Agile practices, mentoring juniors in TDD, CI/CD, and \niterative delivery.",
+      "details": "★ Redesigned legacy MRI apps into modular, layered architectures. \n\n★ Developed a reflection framework that optimized UI responsiveness and \nreduced overhead. \n\n★ Championed modern engineering practices, mentoring juniors in TDD, CI/CD, and \niterative delivery.",
       "highlights": [
         "Redesigned legacy MRI apps into modular, layered architectures.",
         "Developed a reflection framework that optimized UI responsiveness and",
-        "Championed Agile practices, mentoring juniors in TDD, CI/CD, and"
+        "Championed modern engineering practices, mentoring juniors in TDD, CI/CD, and"
       ]
     },
     {
       "role": "Engineer",
       "company": "Honeywell Technology Solutions",
       "period": "January 2010 – October 2012",
-      "details": "★ Built mobile and backend systems for remote patient monitoring using \nAndroid and Bluetooth devices. \n\n★ Delivered enterprise-grade solutions in Agile teams. \n\n★ Recognized for contributions to improvement initiatives.",
+      "details": "★ Built mobile and backend systems for remote patient monitoring using \nAndroid and Bluetooth devices. \n\n★ Delivered enterprise-grade solutions in iterative teams. \n\n★ Recognized for contributions to improvement initiatives.",
       "highlights": [
         "Built mobile and backend systems for remote patient monitoring using Bluetooth devices.",
-        "Delivered enterprise-grade solutions in Agile teams.",
+        "Delivered enterprise-grade solutions in iterative teams.",
         "Recognized for contributions to improvement initiatives."
       ]
     }
   ],
   "skills": [
     "GenAI & AI Agents",
-    "XP & Agile Coaching",
-    "TDD & BDD",
-    "Hands-on Technical Agility",
+    "XP & Engineering Practices Coaching",
+    "TDD & BDD, Refactoring",
+    "Hands-on Technical Coaching",
     "Servant Leadership",
     "Technical Mentorship",
     "Training & Mentoring",
@@ -92,21 +94,21 @@
       "authors": "Kamal Raj Sekar, Kiran Kashyap, Vivek Ganesan",
       "link": "https://leanpub.com/testfirstcopilot",
       "image": "/tfc-cover.jpg",
-      "description": "Crafting provably high quality software using Github Copilot. A comprehensive guide to building greenfield applications with AI-powered development tools while maintaining TDD practices."
+      "description": "How to build a greenfield app with GitHub Copilot without letting the tests slide. Written with Kiran and Vivek after we kept seeing teams ship fast and regret it later."
     },
     {
       "title": "TDD for C# and .Net Core",
       "authors": "Kamal Raj Sekar",
       "link": "https://leanpub.com/tdd-for-csharp-and-dotnetcore-microservices",
       "image": "/dotnet.jpg",
-      "description": "Master Test-Driven Development for .NET Core and microservices. A practical guide covering modern C# development with TDD principles, from basics to advanced patterns."
+      "description": "Test-driven development for .NET Core and microservices, from the first failing test through to the patterns you need on a real service."
     },
     {
       "title": "TDD for Angular",
       "authors": "Vivek Ganesan, Kamal Raj Sekar",
       "link": "https://leanpub.com/tdd-for-angular-application",
       "image": "/angular.png",
-      "description": "A beginner-friendly manual for building robust Angular applications using Test-Driven Development. Learn to write testable code and deliver high-quality frontend applications."
+      "description": "A starting point for Angular developers who have never written a test first. Small steps, working examples, no assumed background."
     }
   ],
   "publications": [
@@ -119,7 +121,25 @@
       "link": "https://zenodo.org/records/19640171",
       "description": "Proposes a seven-agent workflow - Plan, Map, Break, Cover, Implement, Refactor, Finish - that forces an AI assistant to characterize existing behavior with tests before touching code. Applied to a real brownfield codebase, this workflow produced 43 new passing tests (raising statement coverage from 0.85% to 16.78%) vs. zero new tests with a regular approach, and avoided all critical and major bugs the regular approach introduced.",
       "type": "Preprint",
-      "community": "Empirical Software Engineering"
+      "community": "Empirical Software Engineering",
+      "metrics": [
+        {
+          "value": "43",
+          "label": "new passing tests",
+          "note": "the usual approach produced none"
+        },
+        {
+          "value": "0.85% to 16.78%",
+          "label": "statement coverage",
+          "note": "on a real brownfield codebase"
+        },
+        {
+          "value": "0",
+          "label": "critical bugs",
+          "note": "the usual approach introduced several"
+        }
+      ],
+      "summary": "Seven agents (Plan, Map, Break, Cover, Implement, Refactor, Finish) that make an AI assistant write characterization tests before it touches your code."
     },
     {
       "title": "Real Productivity, Rare Pushbacks",
@@ -128,90 +148,301 @@
       "publisher": "Ampyard",
       "doi": null,
       "link": "https://www.ampyard.com/resources/whitepapers/real-producitivty-rare-pushbacks-ai-agents/",
-      "description": "A whitepaper on integrating AI agents into product development workflows. Explores practical strategies for adopting AI-augmented engineering while maintaining quality and team productivity.",
+      "description": "What we learned putting AI agents into real product teams: where they genuinely helped, where people pushed back, and what we would do differently.",
       "type": "Whitepaper"
     }
   ],
+  "writing": {
+    "name": "Kamal xplAIns",
+    "link": "https://kamalxplains.substack.com/",
+    "tagline": "Brief, grounded insights for anyone learning about AI — cutting through the hype to share the essential gists.",
+    "posts": [
+      {
+        "title": "An attempt to explain how AI actually learns — without a single complex equation!",
+        "summary": "Using a simple pairs game to make one of the hardest concepts in AI feel like something you already knew.",
+        "date": "May 2026",
+        "link": "https://kamalxplains.substack.com/p/an-attempt-to-explain-how-ai-actually"
+      },
+      {
+        "title": "Are your org’s secrets leaking through AI tools?",
+        "summary": "A supply chain attack sounds like something that happens to someone else. If anyone on your team uses an AI coding agent, your secrets are in the blast radius.",
+        "date": "May 2026",
+        "link": "https://kamalxplains.substack.com/p/are-your-orgs-secrets-leaking-through"
+      }
+    ]
+  },
   "openSource": [
     {
       "title": "Google Gemini CLI",
+      "org": "google-gemini/gemini-cli",
       "link": "https://github.com/google-gemini/gemini-cli/pull/6121",
-      "description": "Contributed to Google Gemini CLI fixing some bugs and refactor"
+      "stars": 107000,
+      "kind": "contribution",
+      "featured": true,
+      "description": "Fixed a bug in Google's command-line agent for Gemini, where saved chats were coming back empty.",
+      "blurb": "Contributed to Google's open source command-line agent for working with Gemini models.",
+      "homepage": true,
+      "subtitle": "Google"
     },
     {
       "title": "GitHub Awesome Copilot",
+      "org": "github/awesome-copilot",
       "link": "https://github.com/github/awesome-copilot/pull/661",
-      "description": "Contributed a new resource to the Awesome Copilot curated list"
+      "stars": 38500,
+      "kind": "contribution",
+      "featured": true,
+      "description": "Contributed to GitHub's official collection of Copilot instructions, prompts and chat modes.",
+      "blurb": "Contributed to GitHub's official collection of Copilot instructions, prompts and chat modes.",
+      "subtitle": "GitHub"
     },
     {
-      "title": "Microsoft GitHub Copilot - GHCP",
+      "title": "VS Code Copilot Chat",
+      "org": "microsoft/vscode-copilot-chat",
       "link": "https://github.com/microsoft/vscode-copilot-chat/pull/207",
-      "description": "Contributed to GHCP on some refactor"
-    },
-    {
-      "title": "Gauzer",
-      "link": "https://github.com/trycatchkamal/gauzer",
-      "description": "Observability-first struct validation library for Go. Drop-in struct tags, 61ns zero-alloc performance, and native slog/OTel telemetry on every failure - so validation errors land in Datadog, CloudWatch, or Azure Monitor as queryable structured events, not strings you have to parse."
-    },
-    {
-      "title": "playwright-specgen",
-      "link": "https://www.npmjs.com/package/playwright-specgen",
-      "description": "Turns Playwright trace.zip files into readable user-flow YAMLs, API maps, and executable test files - automatically. The missing observation layer between recorded human behaviour and AI agent operation: gives coding agents (Copilot, Cursor, Claude) machine-readable behavioural specs instead of opaque legacy code."
-    },
-    {
-      "title": "filesystemwatcher-mcp",
-      "link": "https://pypi.org/project/filesystemwatcher-mcp/",
-      "description": "MCP server that gives AI coding agents (Gemini, Claude, Cursor, Copilot) event-driven access to file-system changes - creations, modifications, deletions, and moves - without busy-polling. Built on Watchdog with cross-platform native OS events and strict safety guardrails."
-    },
-    {
-      "title": "Azure Notification Hubs",
-      "link": "https://github.com/trycatchkamal/azurenotificationhubssample",
-      "description": "Sample repo demonstrating push notifications integration with Azure and Spring Boot."
+      "stars": 10000,
+      "kind": "contribution",
+      "featured": true,
+      "description": "Cleaned up the test suite in Microsoft's Copilot Chat extension for VS Code.",
+      "blurb": "Contributed to Microsoft's Copilot Chat extension for VS Code, the AI assistant built into the editor.",
+      "homepage": true,
+      "subtitle": "Microsoft · GHCP"
     },
     {
       "title": "Akka HTTP",
-      "link": "https://github.com/akka/akka-http/pull/2518",
-      "description": "Contributed to Akka’s Scala-based actor system and HTTP components."
+      "org": "akka/akka-http",
+      "link": "https://github.com/akka/akka-http/pulls?q=is%3Apr+author%3Atrycatchkamal",
+      "stars": 1350,
+      "kind": "contribution",
+      "description": "Two merged PRs on the security directives and the authentication docs that go with them."
     },
     {
-      "title": "Kanbanstr",
-      "link": "https://github.com/vivganes/kanbanstr/commits/main/?author=trycatchkamal",
-      "description": "Contributed features to this Nostr-based Kanban board app."
+      "title": "Nostr Development Kit",
+      "org": "nostr-dev-kit/ndk",
+      "link": "https://github.com/nostr-dev-kit/ndk/pull/28",
+      "stars": 451,
+      "kind": "contribution",
+      "description": "Documentation fixes for this Nostr developer toolkit."
     },
     {
       "title": "Zapddit",
+      "org": "vivganes/zapddit",
       "link": "https://github.com/vivganes/zapddit/commits/main/?author=trycatchkamal",
-      "description": "Helped build this Reddit-style client for the decentralized Nostr network."
+      "stars": 42,
+      "kind": "contribution",
+      "description": "Around 30 merged PRs on this Reddit-style Nostr client: profile pages, community creation, threading, media handling and zaps."
+    },
+    {
+      "title": "Kanbanstr",
+      "org": "vivganes/kanbanstr",
+      "link": "https://github.com/vivganes/kanbanstr/commits/main/?author=trycatchkamal",
+      "stars": 22,
+      "kind": "contribution",
+      "description": "Filters, column search and sort, card copying and assignee handling for this Nostr Kanban board."
+    },
+    {
+      "title": "Gauzer",
+      "org": "trycatchkamal/gauzer",
+      "link": "https://github.com/trycatchkamal/gauzer",
+      "stars": 17,
+      "kind": "project",
+      "description": "Struct validation for Go that tells you what went wrong. Zero allocations, 61ns, and every failure lands in Datadog or CloudWatch as a real event instead of a string you have to parse.",
+      "language": "Go",
+      "license": "MIT",
+      "tags": [
+        "Go",
+        "Validation",
+        "OpenTelemetry",
+        "Zero-alloc"
+      ],
+      "order": 6
+    },
+    {
+      "title": "playwright-specgen",
+      "org": "trycatchkamal/playwright-specgen",
+      "link": "https://www.npmjs.com/package/playwright-specgen",
+      "stars": 2,
+      "kind": "project",
+      "description": "Turns a Playwright trace.zip into readable flows, API maps and runnable tests, so a coding agent gets a spec of what the app does instead of guessing from old code.",
+      "language": "TypeScript",
+      "license": "MIT",
+      "tags": [
+        "AI agents",
+        "MCP",
+        "Playwright",
+        "Test generation"
+      ],
+      "order": 3,
+      "featured": true
+    },
+    {
+      "title": "filesystemwatcher-mcp",
+      "org": "trycatchkamal/filesystemwatcher-mcp",
+      "link": "https://pypi.org/project/filesystemwatcher-mcp/",
+      "kind": "project",
+      "description": "An MCP server that tells AI agents when files change instead of making them poll. Built on Watchdog, uses native OS events.",
+      "language": "Python",
+      "license": "MIT",
+      "tags": [
+        "AI agents",
+        "MCP",
+        "File watching"
+      ],
+      "order": 4
+    },
+    {
+      "title": "spec-tracer",
+      "org": "ampyard/spec-tracer",
+      "link": "https://github.com/ampyard/spec-tracer",
+      "kind": "project",
+      "description": "Treats your Gherkin features as the source of truth and pulls unit, integration and end to end results into one report, so you can see which behaviour is actually covered.",
+      "language": "Python",
+      "license": "MIT",
+      "tags": [
+        "AI agents",
+        "Gherkin",
+        "BDD",
+        "Test reporting"
+      ],
+      "order": 1,
+      "featured": true
+    },
+    {
+      "title": "Llaboratory",
+      "org": "ampyard/Llaboratory",
+      "link": "https://github.com/ampyard/Llaboratory",
+      "stars": 4,
+      "kind": "project",
+      "description": "A lab for watching how LLMs behave when you hand them fake tools. Useful for working out what agents do when the tooling lies to them.",
+      "language": "TypeScript",
+      "license": "MIT",
+      "tags": [
+        "AI agents",
+        "LLM behaviour",
+        "Mock tools"
+      ],
+      "order": 2,
+      "featured": true
+    },
+    {
+      "title": "gitlab-copilot-agent",
+      "org": "trycatchkamal/gitlab-copilot-agent",
+      "link": "https://github.com/trycatchkamal/gitlab-copilot-agent",
+      "kind": "project",
+      "description": "A coding agent built on the Copilot SDK that works through GitLab issues and merge requests.",
+      "language": "TypeScript",
+      "license": "MIT",
+      "tags": [
+        "AI agents",
+        "Copilot SDK",
+        "GitLab"
+      ],
+      "order": 5
+    },
+    {
+      "title": "Azure Notification Hubs sample",
+      "org": "trycatchkamal/azurenotificationhubssample",
+      "link": "https://github.com/trycatchkamal/azurenotificationhubssample",
+      "stars": 1,
+      "kind": "project",
+      "description": "Spring Boot sample for push notifications through Azure Notification Hubs.",
+      "language": "Java",
+      "license": "MIT",
+      "tags": [
+        "Spring Boot",
+        "Azure",
+        "Push notifications"
+      ],
+      "order": 7
     }
   ],
   "speaking": [
     {
-      "title": "Agile Mumbai 2025 - GenAI",
+      "title": "ICAISE",
+      "venue": "International Conference on AI in Software Engineering, Japan",
+      "topic": "AI in software engineering",
+      "link": "https://www.linkedin.com/posts/vivganes_happy-to-announce-that-kamal-raj-sekar-and-share-7490039662309380097-19KZ/"
+    },
+    {
+      "title": "ICaAI",
+      "venue": "Indian Circle of Agile & AI",
+      "topic": "GenAI for leadership",
+      "link": "https://www.linkedin.com/posts/kamalrajsekar_ai-leadership-ugcPost-7492215331923619840-pDps/"
+    },
+    {
+      "title": "Guest Speaker at Fountane",
+      "venue": "Fountane Inc",
+      "topic": "GenAI",
+      "link": "https://www.linkedin.com/posts/kamalrajsekar_looking-back-its-nice-to-see-how-a-lot-ugcPost-7484628323491393537-Lth4/"
+    },
+    {
+      "title": "Regional Scrum Gathering",
+      "venue": "Scrum Alliance, Hyderabad",
+      "topic": "GenAI",
+      "link": "https://www.linkedin.com/posts/rsgh2026-scrumalliance-ai-ugcPost-7481283619265835008-AmPg/"
+    },
+    {
+      "title": "Agile Mumbai 2025",
+      "venue": "Agile Network India, Mumbai",
+      "topic": "GenAI",
+      "link": "https://lnkd.in/p/gPnsCGT3"
+    },
+    {
+      "title": "Gearbox",
+      "venue": "Infosys",
+      "topic": "AI in engineering",
       "link": ""
     },
     {
-      "title": "AI Talk at Infosys - Gearbox",
-      "link": ""
-    },
-    {
-      "title": "AI tank symposium",
-      "link": "https://www.linkedin.com/posts/vikas-uppal-5208687_what-a-brilliant-talk-by-vivek-ganesan-and-activity-7314318703272071168-bDst?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVbtn0BDNJ-psRdetZADoxp3K9oFJfvaSc"
+      "title": "AI Tank Symposium",
+      "venue": "xTransmatrix",
+      "topic": "AI",
+      "link": "https://www.youtube.com/watch?v=J0DoXsH7To8"
     },
     {
       "title": "GenAI Leadership Talk",
+      "venue": "Pingala Software",
+      "topic": "GenAI for leadership",
       "link": "https://www.linkedin.com/posts/pingala-software-india-pvt-ltd_leadershiptalk-genai-techtalk-activity-7309837629053661184-BG8r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVbtn0BDNJ-psRdetZADoxp3K9oFJfvaSc"
     },
     {
       "title": "AI Webinars",
+      "venue": "Pingala Software",
+      "topic": "GenAI",
       "link": "https://www.linkedin.com/posts/pingala-software-india-pvt-ltd_leadershiptalk-genai-techtalk-activity-7309837629053661184-BG8r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVbtn0BDNJ-psRdetZADoxp3K9oFJfvaSc"
     },
     {
-      "title": "Technical Agility Conference 2020",
+      "title": "Technical Agility Conference",
+      "venue": "2020",
+      "topic": "Technical agility",
       "link": "https://www.youtube.com/watch?v=yJJgNMwFTow"
     },
     {
       "title": "Agile Gurugram",
-      "link": "https://www.youtube.com/watch?v=yJJgNMwFTow"
+      "venue": "Agile Network India, Gurugram",
+      "topic": "Technical agility",
+      "link": ""
+    }
+  ],
+  "speakingPhotos": [
+    {
+      "src": "/speaking-0.JPG",
+      "alt": "Kamal Raj Sekar speaking at an event",
+      "caption": "Speaking engagement"
+    },
+    {
+      "src": "/speaking-1.JPG",
+      "alt": "Kamal Raj Sekar during a speaking engagement",
+      "caption": "Speaking engagement"
+    },
+    {
+      "src": "/speaking-2.JPG",
+      "alt": "Kamal Raj Sekar presenting to an audience",
+      "caption": "Speaking engagement"
+    },
+    {
+      "src": "/speaking-3.png",
+      "alt": "Kamal Raj Sekar at a speaking event",
+      "caption": "Speaking engagement"
     }
   ],
   "trainings": [
@@ -234,5 +465,9 @@
   "education": {
     "degree": "B.Tech, Information Technology",
     "institution": "SASTRA University"
+  },
+  "openSourceStats": {
+    "mergedPrs": 56,
+    "profile": "https://github.com/trycatchkamal"
   }
 }

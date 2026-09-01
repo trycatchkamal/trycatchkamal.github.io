@@ -1,0 +1,222 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Contact from '../components/Contact.astro';
+import resumeData from '../data/resume.json';
+
+const { profile } = resumeData;
+
+import engagements from '../data/services.json';
+
+const audiences = [
+  'You are trying to work out where AI actually belongs in your business, and what is worth building versus buying',
+  'Your team ships to production every week, and you want AI in that process without quality quietly slipping',
+  'You are the one making the AI calls for your teams, and you would rather talk them through with someone who has made them before',
+  'You are rolling out Copilot, Claude Code, or Cursor and want it to stick beyond the first month',
+  'You have a large legacy codebase and a nervous feeling about pointing AI at it'
+];
+
+const process = [
+  [
+    '01',
+    'Discovery',
+    'A free fitment call where we map your AI goals, your current stack, how your teams work today, and what you are actually worried about. If I am not the right person, I will tell you.'
+  ],
+  [
+    '02',
+    'Pilot',
+    'We pick one team and one real piece of work — small enough to move quickly, real enough that the result means something. We agree upfront what better looks like and how we will know.'
+  ],
+  [
+    '03',
+    'Scale',
+    'What worked in the pilot becomes training, working agreements, patterns, and guardrails for the wider organisation, including the engineering practices that make the AI part safe.'
+  ],
+  [
+    '04',
+    'Measure & adjust',
+    'We look at what actually changed in your delivery and your code quality, correct what drifted, and hand the practice to your own people so it does not depend on me being in the room.'
+  ]
+];
+
+const credentials = [
+  { stat: '50+', label: 'Engineers trained in disciplined, test-first AI-assisted development' },
+  { stat: '17+', label: 'Years coaching engineering teams on TDD, BDD, and continuous delivery' },
+  { stat: '3', label: 'Books published on testing and AI-assisted development' },
+  { stat: '2', label: 'Published papers, including peer-reviewed research on agentic refactoring' }
+];
+
+const trackRecord = [
+  'Author of Test-First Copilot and two further books on test-driven development',
+  'Two published papers — Agentic Code Surgery for Brownfield Systems, peer-reviewed on Zenodo (2026), and Real Productivity, Rare Pushbacks, on putting AI agents into real product teams',
+  'Contributor to Google’s Gemini CLI and Microsoft’s VS Code Copilot Chat, author of spec-tracer, and many more',
+  'Cofounder and Director at Ampyard, where I do the AI consulting and tech coaching',
+  'Built and shipped two AI SaaS products end to end'
+];
+---
+
+<Layout
+  title={`AI Consulting & Tech Coaching - ${profile.name}`}
+  description="AI advisory, tech coaching, 1:1 mentoring, and hands-on AI workshops for engineering teams and their leaders, by Kamal Raj Sekar."
+>
+  <Header />
+  <main>
+    <section class="section-dark">
+      <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+        <p class="eyebrow-dark">Consulting &amp; mentoring</p>
+        <div class="mt-6 grid gap-12 lg:grid-cols-[1fr_0.42fr] lg:items-end">
+          <div>
+            <h1 class="max-w-4xl text-5xl font-bold leading-[1.02] tracking-[-0.045em] md:text-[4rem] md:leading-[1]">
+              Pragmatic AI for engineering teams.
+            </h1>
+            <p class="mt-7 max-w-3xl text-lg leading-relaxed text-slate-300 md:text-xl">
+              {profile.intro}
+            </p>
+          </div>
+          <div class="flex flex-col items-start gap-3 lg:items-end">
+            <a
+              href={profile.calendarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary-dark"
+            >
+              Book a free fitment call <span class="ml-2" aria-hidden="true">↗</span>
+            </a>
+            <a href="/talks" class="px-3 py-2 font-semibold text-slate-300 transition hover:text-cyan-200">
+              See how I teach <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <dl class="mt-16 grid gap-8 border-t border-slate-800 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+          {credentials.map((item) => (
+            <div>
+              <dt class="sr-only">{item.label}</dt>
+              <dd class="text-4xl font-bold tracking-[-0.03em] text-cyan-300">{item.stat}</dd>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">{item.label}</p>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <section class="section-paper">
+      <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+        <p class="eyebrow">Ways to work together</p>
+        <h2 class="section-title">Four ways I can help.</h2>
+        <p class="section-lede">Pick whichever matches where your team is right now.</p>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2">
+          {engagements.map((engagement) => (
+            <article
+              id={engagement.href.split('#')[1]}
+              class="flex scroll-mt-28 flex-col rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8"
+            >
+              <p class="text-sm font-bold text-blue-600">{engagement.number}</p>
+              <h3 class="mt-10 text-2xl font-bold tracking-[-0.03em] text-slate-950">
+                {engagement.title}
+              </h3>
+              <p class="mt-3 text-sm font-semibold text-blue-700">{engagement.audience}</p>
+              <p class="mt-5 flex-1 leading-relaxed text-slate-600">{engagement.description}</p>
+              <ul class="mt-7 space-y-3 border-t border-slate-200 pt-6">
+                {engagement.points.map((point) => (
+                  <li class="flex gap-3 text-sm leading-relaxed text-slate-600">
+                    <span class="text-blue-600" aria-hidden="true">✦</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-12">
+          <a href={profile.calendarUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Book a free fitment call <span class="ml-2" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-8 md:py-28 lg:grid-cols-[0.44fr_0.56fr]">
+        <div class="lg:sticky lg:top-28 lg:self-start">
+          <p class="eyebrow">Who this is for</p>
+          <h2 class="section-title">Does this sound like you?</h2>
+          <p class="section-lede">
+            If you recognise yourself in more than one of these, we should talk.
+          </p>
+        </div>
+        <div class="space-y-5">
+          {audiences.map((audience) => (
+            <div class="flex gap-4 border-b border-slate-200 pb-5">
+              <span class="mt-1.5 text-blue-600" aria-hidden="true">✦</span>
+              <p class="text-lg leading-relaxed text-slate-600">{audience}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+        <p class="eyebrow-dark">How we would work</p>
+        <h2 class="section-title-dark max-w-3xl">Start small, then make it stick.</h2>
+        <p class="section-lede-dark">
+          A few people using AI well is not the same as your company getting
+          better at it. Here is how we close that gap.
+        </p>
+        <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-slate-700 bg-slate-700 md:grid-cols-2">
+          {process.map(([number, title, description]) => (
+            <article class="bg-slate-900 p-7 md:p-8">
+              <p class="text-sm font-bold text-cyan-300">{number}</p>
+              <h3 class="mt-8 text-2xl font-bold tracking-[-0.02em]">{title}</h3>
+              <p class="mt-4 leading-relaxed text-slate-300">{description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section-paper">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-8 md:py-28 lg:grid-cols-[0.4fr_0.6fr]">
+        <div class="lg:sticky lg:top-28 lg:self-start">
+          <p class="eyebrow">Track record</p>
+          <h2 class="section-title">Why me.</h2>
+          <p class="section-lede">
+            The AI part is recent. The engineering part is not.
+          </p>
+        </div>
+        <ul class="space-y-4">
+          {trackRecord.map((item) => (
+            <li class="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-lg leading-relaxed text-slate-700 shadow-sm">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-blue-600 text-white">
+      <div class="mx-auto max-w-7xl px-6 py-20 text-center md:px-8 md:py-28">
+        <h2 class="mx-auto max-w-3xl text-4xl font-bold tracking-[-0.04em] md:text-5xl">
+          Let&rsquo;s talk about your team.
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-blue-100">
+          Book a free fitment call. We&rsquo;ll go through where you are with AI, what
+          your engineering practices look like underneath it, and whether I&rsquo;m the
+          right person to help you.
+        </p>
+        <a
+          href={profile.calendarUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-9 inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-blue-700 transition hover:bg-slate-950 hover:text-white"
+        >
+          Book a free fitment call <span class="ml-2" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Contact />
+</Layout>

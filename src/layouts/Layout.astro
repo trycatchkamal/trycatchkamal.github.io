@@ -4,9 +4,16 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  /** Path to a social share image in /public. Falls back to the portrait. */
+  image?: string;
+  /** Set for pages that should not be indexed. */
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, image = '/profile.jpeg', noindex = false } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const socialImage = new URL(image, Astro.site).href;
 ---
 
 <!doctype html>
@@ -16,22 +23,63 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- SEO Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:site_name" content="Kamal Raj Sekar" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:creator" content="@notifykamalraj" />
+
+    <!-- Who the site is about, for search engines -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Kamal Raj Sekar',
+        url: Astro.site?.href,
+        image: socialImage,
+        jobTitle: 'AI Consultant & Tech Coach',
+        worksFor: { '@type': 'Organization', name: 'Ampyard', url: 'https://www.ampyard.com/' },
+        sameAs: [
+          'https://github.com/trycatchkamal',
+          'https://www.linkedin.com/in/kamalrajsekar/',
+          'https://x.com/notifykamalraj',
+          'https://kamalxplains.substack.com/'
+        ],
+        knowsAbout: [
+          'AI-assisted software development',
+          'Test-driven development',
+          'Behaviour-driven development',
+          'Technical agility',
+          'Continuous delivery'
+        ]
+      })}
+    />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYFPHRRQ2C"></script>

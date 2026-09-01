@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #3b82f6;
-  --color-accent-dark: #1d4ed8;
+  /* One accent, used everywhere. No more amber/violet/green/indigo drift. */
+  --color-accent: #2563eb;
+  --color-accent-soft: #67e8f9;
+  --color-ink: #020617;
+  --color-paper: #f7f7f4;
+
+  --font-sans: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @layer base {
@@ -11,30 +17,104 @@
   }
 
   body {
-    @apply text-gray-900 bg-white antialiased;
+    @apply bg-white text-slate-950 antialiased;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  /* Monospace runs wide, so headings need tighter tracking than a
+     proportional face and body copy needs a little more line-height. */
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.045em;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  /* Anchored sections must clear the sticky header. */
+  :target {
+    scroll-margin-top: 6rem;
   }
 }
 
 @layer components {
+  /* ---- Section scaffolding ---------------------------------------- */
   .section-container {
-    @apply max-w-4xl md:max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24;
+    @apply mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28;
   }
 
+  .section-light {
+    @apply border-b border-slate-200 bg-white;
+  }
+
+  .section-paper {
+    @apply border-b border-slate-200 bg-[#f7f7f4];
+  }
+
+  .section-dark {
+    @apply bg-slate-950 text-white;
+  }
+
+  /* ---- Typography -------------------------------------------------- */
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-blue-600;
+  }
+
+  .eyebrow-dark {
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-cyan-300;
+  }
+
+  .section-title {
+    @apply mt-4 text-4xl font-bold tracking-[-0.04em] text-slate-950 md:text-5xl;
+  }
+
+  .section-title-dark {
+    @apply mt-4 text-4xl font-bold tracking-[-0.04em] text-white md:text-5xl;
+  }
+
+  .section-lede {
+    @apply mt-5 max-w-2xl text-lg leading-relaxed text-slate-600;
+  }
+
+  .section-lede-dark {
+    @apply mt-5 max-w-2xl text-lg leading-relaxed text-slate-300;
+  }
+
+  /* ---- Surfaces ---------------------------------------------------- */
   .card {
-    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 transition-all duration-300 hover:shadow-md;
+    @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300;
   }
 
-  .card:hover {
-    border-color: #3b82f6;
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl;
+  }
+
+  /* ---- Buttons ----------------------------------------------------- */
+  .btn-primary {
+    @apply inline-flex items-center rounded-full bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-blue-600;
+  }
+
+  .btn-primary-dark {
+    @apply inline-flex items-center rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-950 transition hover:border-blue-600 hover:text-blue-600;
+  }
+
+  .btn-ghost-dark {
+    @apply inline-flex items-center rounded-full border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200;
   }
 
   .badge {
-    @apply inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-800 font-medium transition-colors duration-200;
+    @apply inline-flex items-center rounded-full bg-white px-4 py-2 font-medium text-slate-800 transition-colors duration-200 border border-slate-200;
   }
 
   .badge:hover {
-    border-color: #3b82f6;
-    color: #3b82f6;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
   }
 }
 
@@ -51,6 +131,16 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .fade-in {
+      animation: none;
     }
   }
 }

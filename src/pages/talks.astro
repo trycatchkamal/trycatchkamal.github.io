@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Talks from '../components/Talks.astro';
+import Contact from '../components/Contact.astro';
+import resumeData from '../data/resume.json';
+---
+
+<Layout
+  title={`Talks & Speaking - ${resumeData.profile.name}`}
+  description="Conference talks on AI, technical agility, and software engineering — plus multi-day training programmes for engineering and leadership teams."
+>
+  <Header />
+  <main>
+    <Talks />
+  </main>
+  <Contact />
+</Layout>
